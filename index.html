@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+        content="DyaDiT: A Multimodal Diffusion Transformer for Dyadic Conversational Gesture Generation">
+    <meta name="keywords"
+        content="DyaDiT, Dyadic Conversation, Gesture Generation, Diffusion Transformer, Motion Generation, CVPR 2026">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DyaDiT: A Multimodal Diffusion Transformer for Dyadic Conversational Gesture Generation</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <!-- <link rel="icon" href="./static/images/favicon.png"> -->
+</head>
+
+<body>
+
+    <!-- ===== Hero ===== -->
+    <section class="hero is-light">
+        <div class="hero-body">
+            <div class="container is-max-widescreen">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <!-- Uncomment and set logo if available -->
+                        <!-- <div class="publication-logo mb-3">
+                            <img src="./static/images/logo.png" alt="DyaDiT Logo" style="max-height: 120px;">
+                        </div> -->
+                        <h1 class="title is-2 publication-title">
+                            DyaDiT: A Multimodal Diffusion Transformer for Dyadic Conversational Gesture Generation
+                        </h1>
+
+                        <div class="is-size-5 publication-venue mt-2 mb-3">
+                            <span class="tag is-medium is-info">CVPR 2026</span>
+                        </div>
+
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                <a href="https://puckikk1202.github.io">Yichen Peng</a><sup>1,2</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="#">Jyun-Ting Song</a><sup>2</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="#">Siyeol Jung</a><sup>2,3</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="#">Ruofan Liu</a><sup>1</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="#">Haiyang Liu</a><sup>4,5</sup>,
+                            </span>
+                            <br>
+                            <span class="author-block">
+                                <a href="https://xg-chu.github.io">Xuangeng Chu</a><sup>4,5</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://ruicongliu.github.io">Ruicong Liu</a><sup>4,5</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="#">Erwin Wu</a><sup>1,4</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="#">Hideki Koike</a><sup>1</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="#">Kris Kitani</a><sup>2</sup>
+                            </span>
+                        </div>
+
+                        <div class="is-size-5 publication-authors mt-2">
+                            <span class="author-block"><sup>1</sup>Institute of Science Tokyo,</span>
+                            <span class="author-block"><sup>2</sup>Carnegie Mellon University,</span>
+                            <span class="author-block"><sup>3</sup>UNIST,</span>
+                            <span class="author-block"><sup>4</sup>Shanda AI Research Tokyo,</span>
+                            <span class="author-block"><sup>5</sup>The University of Tokyo</span>
+                        </div>
+
+                        <div class="column has-text-centered mt-3">
+                            <div class="publication-links">
+                                <span class="link-block">
+                                    <a href="#" class="external-link button is-normal is-rounded btn-arxiv">
+                                        <span class="icon"><i class="ai ai-arxiv"></i></span>
+                                        <span>arXiv</span>
+                                    </a>
+                                </span>
+                                <span class="link-block">
+                                    <a href="#" class="external-link button is-normal is-rounded btn-github">
+                                        <span class="icon"><i class="fab fa-github"></i></span>
+                                        <span>Code</span>
+                                    </a>
+                                </span>
+                                <span class="link-block">
+                                    <a href="#" class="external-link button is-normal is-rounded btn-paper">
+                                        <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                                        <span>Paper</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Teaser ===== -->
+    <section class="section" id="teaser" style="padding-top: 1.5rem; padding-bottom: 1rem;">
+        <div class="container is-max-widescreen">
+            <div class="figure-block">
+                <div class="figure-image">
+                    <img src="./static/images/f1.png" alt="DyaDiT Teaser: Input-output overview showing gesture generation conditioned on different relationship types">
+                </div>
+                <p class="figure-caption">
+                    <strong>Figure 1.</strong> DyaDiT takes dyadic audio, partner's gesture, personality scores, and relationship type as input, and generates diverse conversational gestures conditioned on different social contexts (Dating Partner, Friend, Stranger, Family).
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Abstract ===== -->
+    <section class="section" id="abstract" style="padding-top: 1.5rem;">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column">
+                    <h2 class="title is-3 has-text-centered">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Generating realistic conversational gestures is key to making digital humans feel natural and
+                            socially engaging. In this work, we present <strong>DyaDiT</strong>, a multimodal diffusion
+                            transformer that takes dyadic audio signals and, optionally, the partner's gesture as input
+                            to generate contextually appropriate and socially favorable gestures. DyaDiT conditions on
+                            multiple input modalities&mdash;including audio, partner motion, relationship type, and
+                            personality scores. It incorporates an <strong>Audio Orthogonalization Cross-Attention
+                                (ORCA)</strong> module to derive cleaner and more disentangled audio features, and
+                            leverages a learnable <strong>motion dictionary</strong> to guide style-aware gesture
+                            generation. In particular, ORCA reduces ambiguity between the two audio streams, allowing
+                            DyaDiT to generate realistic motion even when one speaker interrupts or overlaps with the
+                            other. DyaDiT controls gesture style through relationship and personality-score tokens.
+                            We conducted an A/B preference study with sixteen participants to evaluate human motion in
+                            dyadic conversation settings. Participants preferred our generated gestures, citing their
+                            more natural and socially aware conversational behavior.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Introduction Video ===== -->
+    <section class="section" id="video">
+        <div class="container is-max-desktop">
+            <h2 class="title is-3 has-text-centered">Video</h2>
+            <div class="columns is-centered">
+                <div class="column is-10">
+                    <div class="video-container">
+                        <video controls playsinline>
+                            <source src="./static/videos/DyaDiT_video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Paper Figures ===== -->
+    <section class="section figures-section" id="figures">
+        <div class="container is-max-desktop">
+            <h2 class="title is-3 has-text-centered">Method & Results</h2>
+
+            <!-- Figure 2: Architecture -->
+            <div class="figure-block">
+                <div class="figure-image">
+                    <img src="./static/images/f2.png" alt="DyaDiT Architecture">
+                </div>
+                <p class="figure-caption">
+                    <strong>Figure 2.</strong> Architecture of DyaDiT. (a) The overall pipeline uses DiT blocks with Self-Attention, Cross-Attention, and FiLM layers, conditioned on relationship, personality scores, and time embeddings. (b) The Orthogonalization Cross-Attention (ORCA) module disentangles self and other audio features via orthogonalization and a learnable gate. (c) The Motion Dictionary guides style-aware generation through cross-attention with audio features.
+                </p>
+            </div>
+
+            <!-- Figure 3: Interruption -->
+            <div class="figure-block mt-6">
+                <div class="figure-image">
+                    <img src="./static/images/Interrupt.png" alt="Interruption Scenario Results">
+                </div>
+                <p class="figure-caption">
+                    <strong>Figure 3.</strong> Qualitative results for interruption scenarios. DyaDiT generates distinct gesture behaviors for interrupting (active, expressive gestures) and being interrupted (restrained, listening gestures), demonstrating awareness of conversational dynamics.
+                </p>
+            </div>
+
+            <!-- Figure 4: User Preference -->
+            <div class="figure-block mt-6">
+                <div class="figure-image">
+                    <img src="./static/images/pie.png" alt="User Preference Results">
+                </div>
+                <p class="figure-caption">
+                    <strong>Figure 4.</strong> A/B user preference study results. DyaDiT is preferred over Convofusion across overall quality, relationship consistency, and personality consistency. Against ground truth (GT), DyaDiT achieves competitive preference rates.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BibTeX ===== -->
+    <section class="section" id="bibtex">
+        <div class="container is-max-desktop">
+            <h2 class="title is-3 has-text-centered">BibTeX</h2>
+            <div class="bibtex-container">
+                <button class="button is-small is-light copy-btn" onclick="copyBibtex()">
+                    <span class="icon"><i class="fas fa-copy"></i></span>
+                    <span>Copy</span>
+                </button>
+                <!-- TODO: Update with actual citation -->
+<pre><code>@inproceedings{dyadit2026,
+    title     = {{DyaDiT}: A Multimodal Diffusion Transformer for Dyadic Conversational Gesture Generation},
+    author    = {Peng, Yichen and Song, Jyun-Ting and Jung, Siyeol and Liu, Ruofan and Liu, Haiyang and Chu, Xuangeng and Liu, Ruicong and Wu, Erwin and Koike, Hideki and Kitani, Kris},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    year      = {2026}
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    The template is borrowed from <a href="https://github.com/xg-chu/project_unils">UniLS</a>.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function copyBibtex() {
+            const code = document.querySelector('#bibtex pre code').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                const btn = document.querySelector('.copy-btn span:last-child');
+                btn.textContent = 'Copied!';
+                setTimeout(() => { btn.textContent = 'Copy'; }, 2000);
+            });
+        }
+    </script>
+
+</body>
+
+</html>
